@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="description"
+    content="Divine Motivation - Find Your Strength. Trust Your Journey. Daily spiritual and motivational inspiration." />
+  <meta name="theme-color" content="#0F172A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Divine" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+  <!-- Fonts: elegant serif for quotes, clean sans for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <title>Divine Motivation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===================== BACKGROUND LAYER ===================== -->
+  <div class="bg-layer" id="bgLayer">
+    <div class="bg-overlay"></div>
+  </div>
+
+  <!-- ===================== APP SHELL ===================== -->
+  <div class="app-shell">
+
+    <!-- ===================== TOP BAR ===================== -->
+    <header class="top-bar">
+      <nav class="top-nav" aria-label="Primary">
+        <button class="nav-btn active" data-view="home" aria-label="Home">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M12 3l9 8h-3v9h-4v-6H10v6H6v-9H3z" />
+          </svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-btn" data-view="collection" aria-label="My Collection">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M4 4h16v3H4zm0 5h16v3H4zm0 5h16v3H4zm0 5h10v3H4z" />
+          </svg>
+          <span>Collection</span>
+        </button>
+        <button class="nav-btn" data-view="favourites" aria-label="Favourites">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path
+              d="M12 21l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.18z" />
+          </svg>
+          <span>Favourites</span>
+        </button>
+        <button class="nav-btn" data-view="settings" aria-label="Settings">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path
+              d="M12 8a4 4 0 100 8 4 4 0 000-8zm9 4l-2.3-.7a6.5 6.5 0 00-.5-1.2l1.1-2.1-1.4-1.4-2.1 1.1a6.5 6.5 0 00-1.2-.5L13 5h-2l-.7 2.3a6.5 6.5 0 00-1.2.5L7 6.7 5.6 8.1l1.1 2.1a6.5 6.5 0 00-.5 1.2L4 12l2.3.7c.1.4.3.8.5 1.2L5.7 16l1.4 1.4 2.1-1.1c.4.2.8.4 1.2.5L11 19h2l.7-2.3c.4-.1.8-.3 1.2-.5l2.1 1.1 1.4-1.4-1.1-2.1c.2-.4.4-.8.5-1.2L21 12z" />
+          </svg>
+          <span>Settings</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="main-content">
+
+      <!-- ============ HOME VIEW ============ -->
+      <section class="view view-home active" id="view-home" aria-label="Home">
+        <div class="quote-card" id="quoteCard">
+          <div class="quote-category" id="quoteCategory">Spirituality</div>
+          <blockquote class="quote-text" id="quoteText">
+            Your faith must be stronger than your fears. Trust the divine plan.
+          </blockquote>
+          <div class="quote-author" id="quoteAuthor">— Divine Wisdom</div>
+
+          <div class="quote-meta">
+            <button class="meta-btn" id="favBtn" aria-label="Toggle favourite" aria-pressed="false" title="Favourite">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M12 21l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.18z" />
+              </svg>
+            </button>
+            <button class="meta-btn" id="copyBtn" aria-label="Copy to clipboard" title="Copy">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M16 1H4a2 2 0 00-2 2v14h2V3h12zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11z" />
+              </svg>
+            </button>
+            <button class="meta-btn" id="shareBtn" aria-label="Share" title="Share">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="actions">
+          <button class="btn btn-secondary" id="prevBtn" aria-label="Previous motivation">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+            <span>Previous</span>
+          </button>
+          <button class="btn btn-primary" id="newBtn">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+            </svg>
+            <span>New Motivation</span>
+          </button>
+          <button class="btn btn-secondary" id="nextBtn" aria-label="Next motivation">
+            <span>Next</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Theme switcher -->
+        <div class="theme-switcher">
+          <span class="theme-label">Theme:</span>
+          <button class="theme-btn active" data-theme="krishna" id="themeKrishna">
+            <span class="theme-dot krishna"></span>
+            <span>Krishna</span>
+          </button>
+          <button class="theme-btn" data-theme="shiva" id="themeShiva">
+            <span class="theme-dot shiva"></span>
+            <span>Shiva</span>
+          </button>
+        </div>
+
+        <footer class="footer">
+          <p>Stay Focused. Stay Positive. Trust the Divine.</p>
+        </footer>
+      </section>
+
+      <!-- ============ COLLECTION VIEW ============ -->
+      <section class="view view-collection" id="view-collection" aria-label="My Collection">
+        <div class="view-header">
+          <h2 class="view-title">My Collection</h2>
+          <button class="btn btn-primary btn-sm" id="addNewBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+            </svg>
+            <span>Add New</span>
+          </button>
+        </div>
+
+        <!-- Category filter -->
+        <div class="filter-bar">
+          <select id="filterCategory" class="select" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="Discipline">Discipline</option>
+            <option value="Success">Success</option>
+            <option value="Hard Work">Hard Work</option>
+            <option value="Self Confidence">Self Confidence</option>
+            <option value="Life Lessons">Life Lessons</option>
+            <option value="Spirituality">Spirituality</option>
+            <option value="Bhagavad Gita">Bhagavad Gita</option>
+            <option value="Personal Thoughts">Personal Thoughts</option>
+          </select>
+          <input type="search" id="searchInput" class="search-input" placeholder="Search motivations..."
+            aria-label="Search motivations" />
+        </div>
+
+        <div class="collection-stats" id="collectionStats">0 motivations</div>
+
+        <ul class="collection-list" id="collectionList" aria-live="polite"></ul>
+
+        <div class="empty-state" id="collectionEmpty" hidden>
+          <div class="empty-icon" aria-hidden="true">📜</div>
+          <p>No motivations yet.</p>
+          <button class="btn btn-primary btn-sm" id="emptyAddBtn">Add your first motivation</button>
+        </div>
+      </section>
+
+      <!-- ============ FAVOURITES VIEW ============ -->
+      <section class="view view-favourites" id="view-favourites" aria-label="Favourites">
+        <div class="view-header">
+          <h2 class="view-title">Favourites</h2>
+        </div>
+        <div class="collection-stats" id="favStats">0 favourites</div>
+        <ul class="collection-list" id="favList" aria-live="polite"></ul>
+        <div class="empty-state" id="favEmpty" hidden>
+          <div class="empty-icon" aria-hidden="true">💛</div>
+          <p>No favourites yet.</p>
+          <p class="empty-sub">Tap the heart icon on any motivation to save it here.</p>
+        </div>
+      </section>
+
+      <!-- ============ SETTINGS VIEW ============ -->
+      <section class="view view-settings" id="view-settings" aria-label="Settings">
+        <div class="view-header">
+          <h2 class="view-title">Settings</h2>
+        </div>
+
+        <div class="settings-card">
+          <h3 class="settings-section-title">Background Theme</h3>
+          <div class="settings-row">
+            <label for="settingTheme">Default deity theme</label>
+            <select id="settingTheme" class="select">
+              <option value="krishna">Lord Krishna</option>
+              <option value="shiva">Lord Shiva</option>
+            </select>
+          </div>
+          <div class="settings-row">
+            <label for="settingBgRotate">Rotate background image</label>
+            <select id="settingBgRotate" class="select">
+              <option value="off">Keep one image</option>
+              <option value="on">Change image with each new motivation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3 class="settings-section-title">Daily Inspiration</h3>
+          <div class="settings-row">
+            <label for="settingDaily">Show a new motivation when app opens</label>
+            <select id="settingDaily" class="select">
+              <option value="on">Yes, daily inspiration</option>
+              <option value="off">No, keep the last viewed</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3 class="settings-section-title">Data Management</h3>
+          <p class="settings-note">Your motivations are stored only on this device (browser LocalStorage). No account,
+            no cloud, no tracking.</p>
+          <div class="settings-actions">
+            <button class="btn btn-secondary btn-sm" id="exportBtn">Export to file</button>
+            <button class="btn btn-secondary btn-sm" id="importBtn">Import from file</button>
+            <input type="file" id="importFile" accept="application/json" hidden />
+            <button class="btn btn-danger btn-sm" id="resetBtn">Reset to sample data</button>
+            <button class="btn btn-danger btn-sm" id="clearAllBtn">Delete all</button>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3 class="settings-section-title">About</h3>
+          <p class="settings-note">Divine Motivation v1.0.0 — A peaceful, distraction-free PWA for daily inspiration.
+            Installable on Android via "Add to Home Screen" or "Install App" in your browser menu.</p>
+          <p class="settings-note">Background images feature Lord Krishna and Lord Shiva from royalty-free sources. Om
+            Namah Shivaya. Hare Krishna.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ===================== MODAL: Add/Edit Motivation ===================== -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Add New Motivation</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="motivationForm" class="modal-form">
+        <input type="hidden" id="editId" value="" />
+
+        <label class="form-label" for="formText">Motivation</label>
+        <textarea id="formText" class="form-textarea" rows="4" maxlength="600"
+          placeholder="Enter your motivational message..." required></textarea>
+        <div class="char-count"><span id="charCount">0</span>/600</div>
+
+        <label class="form-label" for="formCategory">Category</label>
+        <select id="formCategory" class="select" required>
+          <option value="Discipline">Discipline</option>
+          <option value="Success">Success</option>
+          <option value="Hard Work">Hard Work</option>
+          <option value="Self Confidence">Self Confidence</option>
+          <option value="Life Lessons">Life Lessons</option>
+          <option value="Spirituality">Spirituality</option>
+          <option value="Bhagavad Gita">Bhagavad Gita</option>
+          <option value="Personal Thoughts">Personal Thoughts</option>
+        </select>
+
+        <label class="form-label" for="formAuthor">Author / Source (optional)</label>
+        <input type="text" id="formAuthor" class="form-input" maxlength="80"
+          placeholder="e.g. Bhagavad Gita 2.47, or your name" />
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="modalCancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="modalSave">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== TOAST ===================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- ===================== CONFIRM DIALOG ===================== -->
+  <div class="modal-overlay" id="confirmOverlay" hidden>
+    <div class="modal modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <h3 class="modal-title" id="confirmTitle">Are you sure?</h3>
+      <p class="confirm-message" id="confirmMessage">This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="confirmCancel">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirmOk">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
